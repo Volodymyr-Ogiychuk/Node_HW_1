@@ -31,8 +31,8 @@ function removeContact(contactId) {
         return;
       }
       const filteredContacts = JSON.parse(data).filter((contacts) => {
-        const noMatches = contact.id === Number(contactId);
-        return Number(contact.id) !== Number(contactId);
+        const noMatches = contacts.id === Number(contactId);
+        return Number(contacts.id) !== Number(contactId);
       });
       const contactsJson = JSON.stringify(filteredContacts);
       writeFile(contactsPath, contactsJson);
